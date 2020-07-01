@@ -1,0 +1,17 @@
+*.pyc
+
+raw_data
+
+data/err-data-compiler--auto-corrupt--codeforce--deepfix-style*
+data/err-data-compiler--auto-corrupt--codeforce--spoc-style*
+data/err-data-compiler--auto-corrupt--orig-deepfix*
+data/err-data-compiler--orig-spoc*
+
+model/out*
+
+evaluation/deepfix/out*
+evaluation/spoc/out*
+evaluation/spoc/translat*
+
+
+codalab
