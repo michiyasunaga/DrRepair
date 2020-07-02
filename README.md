@@ -150,7 +150,7 @@ python3 -u main_spoc.py -o ${name} server -p <port> \
     configs/base.yml  configs/data-spoc/err-data-orig.yml \
     configs/model-code-compiler/2l-graph--dec-attn-all.yml
 ```
-Similar to DeepFix, pick a pork number and a checkpoint, and get the IP address.
+Similar to DeepFix, pick a port number and a checkpoint, and get the IP address.
 Concrete examples are provided in the second half of `model/run_spoc.sh`.
 
 #### 2. Run model on SPoC test
