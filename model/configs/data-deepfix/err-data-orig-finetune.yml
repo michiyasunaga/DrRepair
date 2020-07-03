@@ -1,0 +1,27 @@
+timing:
+  max_steps: 550000
+
+data:
+  name: deepfix-style
+  task: err-compiler
+  splits:
+    train:
+      format: substitute
+      paths: [../data/err-data-compiler--auto-corrupt--orig-deepfix/bin0/*/*,
+              ../data/err-data-compiler--auto-corrupt--orig-deepfix/bin1/*/*,
+              ../data/err-data-compiler--auto-corrupt--orig-deepfix/bin2/*/*,
+              ../data/err-data-compiler--auto-corrupt--orig-deepfix/bin3/*/*,
+              ../data/err-data-compiler--auto-corrupt--codeforce--deepfix-style/*/*.json]
+      shuffle: true
+    dev:
+      format: vanilla
+      path: ../data/err-dev-compiler--for-deepfix/err-dev.2000.jsonl
+    test:
+      format: vanilla
+      path: ../data/err-dev-compiler--for-deepfix/err-dev.2000.jsonl
+  vocab:
+    path: ../data/err-vocab-compiler--for-deepfix/combined.vocab
+    min_freq: 2
+
+train:
+  batch_size: 20

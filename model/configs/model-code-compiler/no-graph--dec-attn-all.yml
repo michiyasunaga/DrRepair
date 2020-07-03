@@ -1,0 +1,26 @@
+train:
+  test_batch_size: 1
+
+model:
+  name: err-localize-edit
+  type: code_compiler
+  dropout: 0.3
+  tok_embed:
+    dim: 200
+  tok_seq_embed:
+    lstm_dim: 200
+    lstm_layers: 4
+  pos_embed:
+    dim: 100    # must be divisible by 2
+  combo_mlp:
+    out_dim: 200
+    hidden_dims: [200]
+  line_seq_embed:
+    lstm_dim: 200
+    lstm_layers: 2
+  final_mlp:
+    hidden_dims: [200]
+    add_residual: true
+
+  decoder_attend_all: true   #decoder attend to all (code, compiler msg, text)
+  graph: 0

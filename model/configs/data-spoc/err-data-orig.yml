@@ -1,0 +1,23 @@
+timing:
+  max_steps: 150000
+
+data:
+  name: spoc-style
+  task: err-compiler
+  splits:
+    train:
+      format: substitute
+      paths: [../data/err-data-compiler--orig-spoc/s1/*,
+              ../data/err-data-compiler--orig-spoc/s2/*,
+              ../data/err-data-compiler--orig-spoc/s3/*,
+              ../data/err-data-compiler--orig-spoc/s4/* ]
+      shuffle: true
+    dev:
+      format: vanilla
+      path: ../data/err-dev-compiler--for-spoc/err-dev.2000.jsonl
+    test:
+      format: vanilla
+      path: ../data/err-dev-compiler--for-spoc/err-dev.2000.jsonl
+  vocab:
+    path: ../data/err-vocab-compiler--for-spoc/combined.vocab
+    min_freq: 2
