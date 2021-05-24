@@ -6,8 +6,8 @@ from collections import defaultdict, Counter
 
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
 
-from err_detector.data.err_dataset import SubstituteErrData
-from err_detector.configs import ConfigDict
+from repairer.data.err_dataset import SubstituteErrData
+from repairer.configs import ConfigDict
 
 
 class DummyDataset(object):
